@@ -1,0 +1,273 @@
+﻿namespace Citric_Composer {
+    partial class Sound3dEditor {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sound3dEditor));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.unknownFlag = new System.Windows.Forms.CheckBox();
+            this.dopplerFactor = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.volume = new System.Windows.Forms.CheckBox();
+            this.priority = new System.Windows.Forms.CheckBox();
+            this.pan = new System.Windows.Forms.CheckBox();
+            this.surroundPan = new System.Windows.Forms.CheckBox();
+            this.filter = new System.Windows.Forms.CheckBox();
+            this.attenuationRate = new System.Windows.Forms.NumericUpDown();
+            this.attenuationCurve = new System.Windows.Forms.ComboBox();
+            this.okButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dopplerFactor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attenuationRate)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.unknownFlag, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.dopplerFactor, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.volume, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.priority, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pan, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.surroundPan, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.filter, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.attenuationRate, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.attenuationCurve, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.okButton, 1, 6);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28816F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(282, 245);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // unknownFlag
+            // 
+            this.unknownFlag.AutoSize = true;
+            this.unknownFlag.Location = new System.Drawing.Point(3, 207);
+            this.unknownFlag.Name = "unknownFlag";
+            this.unknownFlag.Size = new System.Drawing.Size(48, 16);
+            this.unknownFlag.TabIndex = 12;
+            this.unknownFlag.Text = "未知";
+            this.unknownFlag.UseVisualStyleBackColor = true;
+            // 
+            // dopplerFactor
+            // 
+            this.dopplerFactor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dopplerFactor.Location = new System.Drawing.Point(144, 173);
+            this.dopplerFactor.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.dopplerFactor.Name = "dopplerFactor";
+            this.dopplerFactor.Size = new System.Drawing.Size(135, 21);
+            this.dopplerFactor.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(144, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 34);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "多普勒系数:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(144, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 34);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "衰减曲线:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(144, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 34);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "衰减率:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "3d标志:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // volume
+            // 
+            this.volume.AutoSize = true;
+            this.volume.Location = new System.Drawing.Point(3, 37);
+            this.volume.Name = "volume";
+            this.volume.Size = new System.Drawing.Size(48, 16);
+            this.volume.TabIndex = 4;
+            this.volume.Text = "音量";
+            this.volume.UseVisualStyleBackColor = true;
+            // 
+            // priority
+            // 
+            this.priority.AutoSize = true;
+            this.priority.Location = new System.Drawing.Point(3, 71);
+            this.priority.Name = "priority";
+            this.priority.Size = new System.Drawing.Size(60, 16);
+            this.priority.TabIndex = 5;
+            this.priority.Text = "优先级";
+            this.priority.UseVisualStyleBackColor = true;
+            // 
+            // pan
+            // 
+            this.pan.AutoSize = true;
+            this.pan.Location = new System.Drawing.Point(3, 105);
+            this.pan.Name = "pan";
+            this.pan.Size = new System.Drawing.Size(48, 16);
+            this.pan.TabIndex = 6;
+            this.pan.Text = "声像";
+            this.pan.UseVisualStyleBackColor = true;
+            // 
+            // surroundPan
+            // 
+            this.surroundPan.AutoSize = true;
+            this.surroundPan.Location = new System.Drawing.Point(3, 139);
+            this.surroundPan.Name = "surroundPan";
+            this.surroundPan.Size = new System.Drawing.Size(72, 16);
+            this.surroundPan.TabIndex = 7;
+            this.surroundPan.Text = "环绕声像";
+            this.surroundPan.UseVisualStyleBackColor = true;
+            // 
+            // filter
+            // 
+            this.filter.AutoSize = true;
+            this.filter.Location = new System.Drawing.Point(3, 173);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(60, 16);
+            this.filter.TabIndex = 8;
+            this.filter.Text = "过滤器";
+            this.filter.UseVisualStyleBackColor = true;
+            // 
+            // attenuationRate
+            // 
+            this.attenuationRate.DecimalPlaces = 6;
+            this.attenuationRate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.attenuationRate.Location = new System.Drawing.Point(144, 37);
+            this.attenuationRate.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.attenuationRate.Name = "attenuationRate";
+            this.attenuationRate.Size = new System.Drawing.Size(135, 21);
+            this.attenuationRate.TabIndex = 9;
+            this.attenuationRate.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // attenuationCurve
+            // 
+            this.attenuationCurve.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.attenuationCurve.FormattingEnabled = true;
+            this.attenuationCurve.Items.AddRange(new object[] {
+            "Logarithmic",
+            "Linear"});
+            this.attenuationCurve.Location = new System.Drawing.Point(144, 105);
+            this.attenuationCurve.Name = "attenuationCurve";
+            this.attenuationCurve.Size = new System.Drawing.Size(112, 20);
+            this.attenuationCurve.TabIndex = 11;
+            // 
+            // okButton
+            // 
+            this.okButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.okButton.Location = new System.Drawing.Point(144, 207);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(135, 35);
+            this.okButton.TabIndex = 13;
+            this.okButton.Text = "确定";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.OkButton_Click_1);
+            // 
+            // Sound3dEditor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(282, 245);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Sound3dEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "3D声音编辑器 ";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dopplerFactor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.attenuationRate)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox volume;
+        private System.Windows.Forms.CheckBox priority;
+        private System.Windows.Forms.CheckBox pan;
+        private System.Windows.Forms.CheckBox surroundPan;
+        private System.Windows.Forms.CheckBox filter;
+        private System.Windows.Forms.NumericUpDown dopplerFactor;
+        private System.Windows.Forms.NumericUpDown attenuationRate;
+        private System.Windows.Forms.ComboBox attenuationCurve;
+        private System.Windows.Forms.CheckBox unknownFlag;
+        private System.Windows.Forms.Button okButton;
+    }
+}
