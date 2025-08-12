@@ -1,4 +1,4 @@
-﻿using CitraFileLoader;
+using CitraFileLoader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -212,29 +212,29 @@ namespace Citric_Composer {
         private void Browse_Click(object sender, EventArgs e) {
             OpenFileDialog o = new OpenFileDialog();
             o.RestoreDirectory = true;
-            o.Title = "Select New File";
-            o.Filter = "All Files|*.*";
+            o.Title = "选择新文件";
+            o.Filter = "所有文件|*.*";
             switch (type) {
                 case SoundArchive.NewFileEntryType.Bank:
-                    o.Filter = "Bank|*.bfbnk;*.bcbnk";
+                    o.Filter = "Bank(音色库)|*.bfbnk;*.bcbnk";
                     break;
                 case SoundArchive.NewFileEntryType.Group:
-                    o.Filter = "Group|*.bfgrp;*.bcgrp";
+                    o.Filter = "Group(组)|*.bfgrp;*.bcgrp";
                     break;
                 case SoundArchive.NewFileEntryType.Prefetch:
-                    o.Filter = "Prefetch|*.bfstp;*.bcstp";
+                    o.Filter = "Prefetch(预取)|*.bfstp;*.bcstp";
                     break;
                 case SoundArchive.NewFileEntryType.Sequence:
-                    o.Filter = "Sequence|*.bfseq;*.bcseq";
+                    o.Filter = "Sequence(音序)|*.bfseq;*.bcseq";
                     break;
                 case SoundArchive.NewFileEntryType.Stream:
-                    o.Filter = "Stream|*.bfstm;*.bcstm";
+                    o.Filter = "Stream(流)|*.bfstm;*.bcstm";
                     break;
                 case SoundArchive.NewFileEntryType.WaveArchive:
-                    o.Filter = "Wave Archive|*.bfwar;*.bcwar";
+                    o.Filter = "Wave Archive(波形档案)|*.bfwar;*.bcwar";
                     break;
                 case SoundArchive.NewFileEntryType.WaveSoundData:
-                    o.Filter = "Wave Sound Data|*.bfwsd;*.bcwsd";
+                    o.Filter = "Wave Sound Data(波形声音数据)|*.bfwsd;*.bcwsd";
                     break;
             }
             o.ShowDialog();
