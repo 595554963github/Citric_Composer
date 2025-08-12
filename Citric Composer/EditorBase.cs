@@ -1,4 +1,4 @@
-﻿using CitraFileLoader;
+using CitraFileLoader;
 using Syroot.BinaryData;
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using ScintillaNET;
 using System.Diagnostics;
 
-namespace Citric_Composer {
+namespace Citric_Composer
+{
 
     /// <summary>
     /// An editor base for files.
     /// </summary>
-    public abstract class EditorBase : Form {
+    public abstract class EditorBase : Form
+    {
 
         /// <summary>
         /// File type to use.
@@ -101,7 +103,8 @@ namespace Citric_Composer {
         /// <param name="extension">File extension type.</param>
         /// <param name="editorName">Editor name.</param>
         /// <param name="mainWindow">Main window.</param>
-        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, MainWindow mainWindow) {
+        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, MainWindow mainWindow)
+        {
 
             //Initialize component.
             InitializeComponent();
@@ -142,7 +145,8 @@ namespace Citric_Composer {
         /// <param name="editorName">Editor name.</param>
         /// <param name="fileToOpen">File to open.</param>
         /// <param name="mainWindow">Main window.</param>
-        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, string fileToOpen, MainWindow mainWindow) {
+        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, string fileToOpen, MainWindow mainWindow)
+        {
 
             //Initialize component.
             InitializeComponent();
@@ -192,7 +196,8 @@ namespace Citric_Composer {
         /// <param name="editorName">Editor name.</param>
         /// <param name="fileToOpen">File to open.</param>
         /// <param name="mainWindow">Main window.</param>
-        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, SoundFile<ISoundFile> fileToOpen, MainWindow mainWindow) {
+        public EditorBase(Type fileType, string extensionDescription, string extension, string editorName, SoundFile<ISoundFile> fileToOpen, MainWindow mainWindow)
+        {
 
             //Initialize component.
             InitializeComponent();
@@ -217,7 +222,8 @@ namespace Citric_Composer {
             File = ExtFile.File;
             FilePath = "";
             string name = ExtFile.FileName;
-            if (name == null) {
+            if (name == null)
+            {
                 name = "{空的文件名称}";
             }
             Text = EditorName + " - " + name + "." + ExtFile.FileExtension;
@@ -646,7 +652,8 @@ namespace Citric_Composer {
         public DataGridView filesGroupGrid;
         private DataGridViewComboBoxColumn groups;
 
-        public void InitializeComponent() {
+        public void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorBase));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("File Information", 10, 10);
@@ -1555,7 +1562,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel26
             // 
-            this.tableLayoutPanel26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel26.ColumnCount = 3;
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -1611,7 +1618,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel25
             // 
-            this.tableLayoutPanel25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel25.ColumnCount = 2;
             this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1649,7 +1656,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel24
             // 
-            this.tableLayoutPanel24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel24.ColumnCount = 1;
             this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1665,7 +1672,7 @@ namespace Citric_Composer {
             // 
             // sarWsdPlay
             // 
-            this.sarWsdPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarWsdPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarWsdPlay.Location = new System.Drawing.Point(3, 32);
             this.sarWsdPlay.Name = "sarWsdPlay";
@@ -1687,7 +1694,7 @@ namespace Citric_Composer {
             // 
             // sarWsdFileIdBox
             // 
-            this.sarWsdFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarWsdFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarWsdFileIdBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarWsdFileIdBox.FormattingEnabled = true;
@@ -1699,7 +1706,7 @@ namespace Citric_Composer {
             // 
             // label49
             // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.Location = new System.Drawing.Point(8, 4);
             this.label49.Name = "label49";
@@ -1721,7 +1728,7 @@ namespace Citric_Composer {
             // 
             // wsdChannelPriority
             // 
-            this.wsdChannelPriority.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdChannelPriority.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdChannelPriority.Location = new System.Drawing.Point(5, 390);
             this.wsdChannelPriority.Maximum = new decimal(new int[] {
@@ -1736,7 +1743,7 @@ namespace Citric_Composer {
             // 
             // label40
             // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.Location = new System.Drawing.Point(3, 373);
             this.label40.Name = "label40";
@@ -1747,7 +1754,7 @@ namespace Citric_Composer {
             // 
             // wsdCopyCount
             // 
-            this.wsdCopyCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdCopyCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdCopyCount.Location = new System.Drawing.Point(5, 344);
             this.wsdCopyCount.Name = "wsdCopyCount";
@@ -1759,7 +1766,7 @@ namespace Citric_Composer {
             // 
             // wsdTracksToAllocate
             // 
-            this.wsdTracksToAllocate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdTracksToAllocate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdTracksToAllocate.Location = new System.Drawing.Point(6, 318);
             this.wsdTracksToAllocate.Maximum = new decimal(new int[] {
@@ -1774,7 +1781,7 @@ namespace Citric_Composer {
             // 
             // label45
             // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label45.Location = new System.Drawing.Point(2, 301);
             this.label45.Name = "label45";
@@ -1785,7 +1792,7 @@ namespace Citric_Composer {
             // 
             // wsdWaveIndex
             // 
-            this.wsdWaveIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdWaveIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdWaveIndex.Location = new System.Drawing.Point(5, 275);
             this.wsdWaveIndex.Maximum = new decimal(new int[] {
@@ -1800,7 +1807,7 @@ namespace Citric_Composer {
             // 
             // label46
             // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.Location = new System.Drawing.Point(1, 258);
             this.label46.Name = "label46";
@@ -1822,7 +1829,7 @@ namespace Citric_Composer {
             // 
             // wsdSound3dButton
             // 
-            this.wsdSound3dButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdSound3dButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdSound3dButton.Location = new System.Drawing.Point(4, 227);
             this.wsdSound3dButton.Name = "wsdSound3dButton";
@@ -1834,7 +1841,7 @@ namespace Citric_Composer {
             // 
             // wsdEditSoundInfoButton
             // 
-            this.wsdEditSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdEditSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdEditSoundInfoButton.Location = new System.Drawing.Point(4, 180);
             this.wsdEditSoundInfoButton.Name = "wsdEditSoundInfoButton";
@@ -1874,7 +1881,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel23
             // 
-            this.tableLayoutPanel23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel23.ColumnCount = 1;
             this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1890,7 +1897,7 @@ namespace Citric_Composer {
             // 
             // sarSeqPlay
             // 
-            this.sarSeqPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarSeqPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarSeqPlay.Location = new System.Drawing.Point(3, 32);
             this.sarSeqPlay.Name = "sarSeqPlay";
@@ -1912,7 +1919,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel22
             // 
-            this.tableLayoutPanel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel22.ColumnCount = 2;
             this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1950,7 +1957,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel21
             // 
-            this.tableLayoutPanel21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel21.ColumnCount = 3;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2006,7 +2013,7 @@ namespace Citric_Composer {
             // 
             // sarSeqFileIdBox
             // 
-            this.sarSeqFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarSeqFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarSeqFileIdBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarSeqFileIdBox.FormattingEnabled = true;
@@ -2018,7 +2025,7 @@ namespace Citric_Composer {
             // 
             // label47
             // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label47.Location = new System.Drawing.Point(8, 4);
             this.label47.Name = "label47";
@@ -2029,7 +2036,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel19
             // 
-            this.tableLayoutPanel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel19.ColumnCount = 4;
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -2242,7 +2249,7 @@ namespace Citric_Composer {
             // 
             // label39
             // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.Location = new System.Drawing.Point(5, 523);
             this.label39.Name = "label39";
@@ -2264,7 +2271,7 @@ namespace Citric_Composer {
             // 
             // seqChannelPriorityBox
             // 
-            this.seqChannelPriorityBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqChannelPriorityBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqChannelPriorityBox.Location = new System.Drawing.Point(5, 478);
             this.seqChannelPriorityBox.Maximum = new decimal(new int[] {
@@ -2279,7 +2286,7 @@ namespace Citric_Composer {
             // 
             // label41
             // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label41.Location = new System.Drawing.Point(1, 458);
             this.label41.Name = "label41";
@@ -2290,7 +2297,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel20
             // 
-            this.tableLayoutPanel20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel20.ColumnCount = 2;
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -2358,7 +2365,7 @@ namespace Citric_Composer {
             // 
             // label42
             // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.Location = new System.Drawing.Point(2, 379);
             this.label42.Name = "label42";
@@ -2380,7 +2387,7 @@ namespace Citric_Composer {
             // 
             // seqBank3Box
             // 
-            this.seqBank3Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqBank3Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqBank3Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seqBank3Box.FormattingEnabled = true;
@@ -2392,7 +2399,7 @@ namespace Citric_Composer {
             // 
             // seqBank2Box
             // 
-            this.seqBank2Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqBank2Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqBank2Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seqBank2Box.FormattingEnabled = true;
@@ -2404,7 +2411,7 @@ namespace Citric_Composer {
             // 
             // seqBank1Box
             // 
-            this.seqBank1Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqBank1Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqBank1Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seqBank1Box.FormattingEnabled = true;
@@ -2416,7 +2423,7 @@ namespace Citric_Composer {
             // 
             // seqBank0Box
             // 
-            this.seqBank0Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqBank0Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqBank0Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seqBank0Box.FormattingEnabled = true;
@@ -2428,7 +2435,7 @@ namespace Citric_Composer {
             // 
             // label43
             // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label43.Location = new System.Drawing.Point(4, 254);
             this.label43.Name = "label43";
@@ -2439,7 +2446,7 @@ namespace Citric_Composer {
             // 
             // seqEditSound3dInfoButton
             // 
-            this.seqEditSound3dInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqEditSound3dInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqEditSound3dInfoButton.Location = new System.Drawing.Point(5, 228);
             this.seqEditSound3dInfoButton.Name = "seqEditSound3dInfoButton";
@@ -2451,7 +2458,7 @@ namespace Citric_Composer {
             // 
             // seqEditSoundInfoButton
             // 
-            this.seqEditSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqEditSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqEditSoundInfoButton.Location = new System.Drawing.Point(5, 181);
             this.seqEditSoundInfoButton.Name = "seqEditSoundInfoButton";
@@ -2496,7 +2503,7 @@ namespace Citric_Composer {
             // 
             // grpVersionUpdate
             // 
-            this.grpVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpVersionUpdate.Location = new System.Drawing.Point(6, 430);
             this.grpVersionUpdate.Name = "grpVersionUpdate";
@@ -2508,7 +2515,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel11
             // 
-            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2526,7 +2533,7 @@ namespace Citric_Composer {
             // 
             // grpVersionRev
             // 
-            this.grpVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpVersionRev.Location = new System.Drawing.Point(197, 3);
             this.grpVersionRev.Maximum = new decimal(new int[] {
@@ -2571,7 +2578,7 @@ namespace Citric_Composer {
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.Location = new System.Drawing.Point(6, 384);
             this.label23.Name = "label23";
@@ -2582,7 +2589,7 @@ namespace Citric_Composer {
             // 
             // stpVersionUpdate
             // 
-            this.stpVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stpVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stpVersionUpdate.Location = new System.Drawing.Point(6, 575);
             this.stpVersionUpdate.Name = "stpVersionUpdate";
@@ -2594,7 +2601,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel10
             // 
-            this.tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2612,7 +2619,7 @@ namespace Citric_Composer {
             // 
             // stpVersionRev
             // 
-            this.stpVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stpVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stpVersionRev.Location = new System.Drawing.Point(197, 3);
             this.stpVersionRev.Maximum = new decimal(new int[] {
@@ -2657,7 +2664,7 @@ namespace Citric_Composer {
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.Location = new System.Drawing.Point(6, 527);
             this.label22.Name = "label22";
@@ -2668,7 +2675,7 @@ namespace Citric_Composer {
             // 
             // stmVersionUpdate
             // 
-            this.stmVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmVersionUpdate.Location = new System.Drawing.Point(5, 501);
             this.stmVersionUpdate.Name = "stmVersionUpdate";
@@ -2680,7 +2687,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel9
             // 
-            this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2698,7 +2705,7 @@ namespace Citric_Composer {
             // 
             // stmVersionRev
             // 
-            this.stmVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmVersionRev.Location = new System.Drawing.Point(197, 3);
             this.stmVersionRev.Maximum = new decimal(new int[] {
@@ -2743,7 +2750,7 @@ namespace Citric_Composer {
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.Location = new System.Drawing.Point(4, 458);
             this.label21.Name = "label21";
@@ -2754,7 +2761,7 @@ namespace Citric_Composer {
             // 
             // wsdVersionUpdate
             // 
-            this.wsdVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdVersionUpdate.Location = new System.Drawing.Point(5, 361);
             this.wsdVersionUpdate.Name = "wsdVersionUpdate";
@@ -2766,7 +2773,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel12
             // 
-            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel12.ColumnCount = 3;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2784,7 +2791,7 @@ namespace Citric_Composer {
             // 
             // wsdVersionRev
             // 
-            this.wsdVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wsdVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wsdVersionRev.Location = new System.Drawing.Point(197, 3);
             this.wsdVersionRev.Maximum = new decimal(new int[] {
@@ -2829,7 +2836,7 @@ namespace Citric_Composer {
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.Location = new System.Drawing.Point(6, 323);
             this.label20.Name = "label20";
@@ -2840,7 +2847,7 @@ namespace Citric_Composer {
             // 
             // warVersionUpdate
             // 
-            this.warVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.warVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.warVersionUpdate.Location = new System.Drawing.Point(5, 297);
             this.warVersionUpdate.Name = "warVersionUpdate";
@@ -2852,7 +2859,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel13
             // 
-            this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel13.ColumnCount = 3;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2870,7 +2877,7 @@ namespace Citric_Composer {
             // 
             // warVersionRev
             // 
-            this.warVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.warVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.warVersionRev.Location = new System.Drawing.Point(197, 3);
             this.warVersionRev.Maximum = new decimal(new int[] {
@@ -2915,7 +2922,7 @@ namespace Citric_Composer {
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.Location = new System.Drawing.Point(4, 243);
             this.label19.Name = "label19";
@@ -2926,7 +2933,7 @@ namespace Citric_Composer {
             // 
             // bankVersionUpdate
             // 
-            this.bankVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bankVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bankVersionUpdate.Location = new System.Drawing.Point(5, 219);
             this.bankVersionUpdate.Name = "bankVersionUpdate";
@@ -2938,7 +2945,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel14
             // 
-            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel14.ColumnCount = 3;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -2956,7 +2963,7 @@ namespace Citric_Composer {
             // 
             // bankVersionRev
             // 
-            this.bankVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bankVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bankVersionRev.Location = new System.Drawing.Point(197, 3);
             this.bankVersionRev.Maximum = new decimal(new int[] {
@@ -3001,7 +3008,7 @@ namespace Citric_Composer {
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.Location = new System.Drawing.Point(5, 170);
             this.label18.Name = "label18";
@@ -3012,7 +3019,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel15
             // 
-            this.tableLayoutPanel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel15.ColumnCount = 3;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -3030,7 +3037,7 @@ namespace Citric_Composer {
             // 
             // versionRev
             // 
-            this.versionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.versionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.versionRev.Location = new System.Drawing.Point(197, 3);
             this.versionRev.Maximum = new decimal(new int[] {
@@ -3083,7 +3090,7 @@ namespace Citric_Composer {
             // 
             // label24
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.Location = new System.Drawing.Point(7, 47);
             this.label24.Name = "label24";
@@ -3094,7 +3101,7 @@ namespace Citric_Composer {
             // 
             // seqVersionUpdate
             // 
-            this.seqVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqVersionUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqVersionUpdate.Location = new System.Drawing.Point(5, 144);
             this.seqVersionUpdate.Name = "seqVersionUpdate";
@@ -3106,7 +3113,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel16
             // 
-            this.tableLayoutPanel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel16.ColumnCount = 3;
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -3124,7 +3131,7 @@ namespace Citric_Composer {
             // 
             // seqVersionRev
             // 
-            this.seqVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.seqVersionRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.seqVersionRev.Location = new System.Drawing.Point(197, 3);
             this.seqVersionRev.Maximum = new decimal(new int[] {
@@ -3169,7 +3176,7 @@ namespace Citric_Composer {
             // 
             // label25
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.Location = new System.Drawing.Point(6, 94);
             this.label25.Name = "label25";
@@ -3180,7 +3187,7 @@ namespace Citric_Composer {
             // 
             // byteOrderBox
             // 
-            this.byteOrderBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.byteOrderBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.byteOrderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.byteOrderBox.FormattingEnabled = true;
@@ -3195,7 +3202,7 @@ namespace Citric_Composer {
             // 
             // label26
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.Location = new System.Drawing.Point(6, 3);
             this.label26.Name = "label26";
@@ -3218,8 +3225,8 @@ namespace Citric_Composer {
             // 
             // filesGroupGrid
             // 
-            this.filesGroupGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.filesGroupGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.filesGroupGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.filesGroupGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3250,7 +3257,7 @@ namespace Citric_Composer {
             // 
             // fileTypeBox
             // 
-            this.fileTypeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fileTypeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fileTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fileTypeBox.FormattingEnabled = true;
@@ -3269,7 +3276,7 @@ namespace Citric_Composer {
             // 
             // label30
             // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.Location = new System.Drawing.Point(3, 3);
             this.label30.Name = "label30";
@@ -3303,8 +3310,8 @@ namespace Citric_Composer {
             // 
             // trackChannelGrid
             // 
-            this.trackChannelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackChannelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackChannelGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.trackChannelGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3324,7 +3331,7 @@ namespace Citric_Composer {
             // 
             // trackBiquadType
             // 
-            this.trackBiquadType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackBiquadType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBiquadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.trackBiquadType.FormattingEnabled = true;
@@ -3407,7 +3414,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel33
             // 
-            this.tableLayoutPanel33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel33.ColumnCount = 4;
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -3528,7 +3535,7 @@ namespace Citric_Composer {
             // 
             // trackBiquadValue
             // 
-            this.trackBiquadValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackBiquadValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBiquadValue.Location = new System.Drawing.Point(9, 246);
             this.trackBiquadValue.Maximum = new decimal(new int[] {
@@ -3543,7 +3550,7 @@ namespace Citric_Composer {
             // 
             // label68
             // 
-            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label68.Location = new System.Drawing.Point(6, 227);
             this.label68.Name = "label68";
@@ -3554,7 +3561,7 @@ namespace Citric_Composer {
             // 
             // label67
             // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label67.Location = new System.Drawing.Point(5, 184);
             this.label67.Name = "label67";
@@ -3565,7 +3572,7 @@ namespace Citric_Composer {
             // 
             // trackLPFFrequency
             // 
-            this.trackLPFFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackLPFFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackLPFFrequency.Location = new System.Drawing.Point(8, 162);
             this.trackLPFFrequency.Maximum = new decimal(new int[] {
@@ -3580,7 +3587,7 @@ namespace Citric_Composer {
             // 
             // label66
             // 
-            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label66.Location = new System.Drawing.Point(5, 143);
             this.label66.Name = "label66";
@@ -3602,7 +3609,7 @@ namespace Citric_Composer {
             // 
             // trackSpan
             // 
-            this.trackSpan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackSpan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackSpan.Location = new System.Drawing.Point(8, 102);
             this.trackSpan.Maximum = new decimal(new int[] {
@@ -3617,7 +3624,7 @@ namespace Citric_Composer {
             // 
             // label65
             // 
-            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label65.Location = new System.Drawing.Point(5, 83);
             this.label65.Name = "label65";
@@ -3628,7 +3635,7 @@ namespace Citric_Composer {
             // 
             // trackPan
             // 
-            this.trackPan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackPan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackPan.Location = new System.Drawing.Point(8, 63);
             this.trackPan.Maximum = new decimal(new int[] {
@@ -3643,7 +3650,7 @@ namespace Citric_Composer {
             // 
             // label64
             // 
-            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label64.Location = new System.Drawing.Point(5, 44);
             this.label64.Name = "label64";
@@ -3654,7 +3661,7 @@ namespace Citric_Composer {
             // 
             // trackVolume
             // 
-            this.trackVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.trackVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackVolume.Location = new System.Drawing.Point(8, 22);
             this.trackVolume.Maximum = new decimal(new int[] {
@@ -3669,7 +3676,7 @@ namespace Citric_Composer {
             // 
             // label63
             // 
-            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label63.Location = new System.Drawing.Point(5, 3);
             this.label63.Name = "label63";
@@ -3758,7 +3765,7 @@ namespace Citric_Composer {
             // 
             // label48
             // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label48.Location = new System.Drawing.Point(1, 141);
             this.label48.Name = "label48";
@@ -3769,7 +3776,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel27
             // 
-            this.tableLayoutPanel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel27.ColumnCount = 4;
             this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -3982,7 +3989,7 @@ namespace Citric_Composer {
             // 
             // label51
             // 
-            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.Location = new System.Drawing.Point(3, 3);
             this.label51.Name = "label51";
@@ -3993,7 +4000,7 @@ namespace Citric_Composer {
             // 
             // stmSoundInfoButton
             // 
-            this.stmSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmSoundInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmSoundInfoButton.Location = new System.Drawing.Point(5, 21);
             this.stmSoundInfoButton.Name = "stmSoundInfoButton";
@@ -4005,7 +4012,7 @@ namespace Citric_Composer {
             // 
             // stmPitch
             // 
-            this.stmPitch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmPitch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmPitch.DecimalPlaces = 7;
             this.stmPitch.Location = new System.Drawing.Point(7, 393);
@@ -4031,7 +4038,7 @@ namespace Citric_Composer {
             // 
             // stmSound3dButton
             // 
-            this.stmSound3dButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmSound3dButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmSound3dButton.Location = new System.Drawing.Point(5, 68);
             this.stmSound3dButton.Name = "stmSound3dButton";
@@ -4043,7 +4050,7 @@ namespace Citric_Composer {
             // 
             // label56
             // 
-            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label56.Location = new System.Drawing.Point(0, 374);
             this.label56.Name = "label56";
@@ -4065,7 +4072,7 @@ namespace Citric_Composer {
             // 
             // stmAllocateChannelsNum
             // 
-            this.stmAllocateChannelsNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmAllocateChannelsNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmAllocateChannelsNum.Location = new System.Drawing.Point(7, 324);
             this.stmAllocateChannelsNum.Maximum = new decimal(new int[] {
@@ -4091,7 +4098,7 @@ namespace Citric_Composer {
             // 
             // stmCopyChannelCountFromFile
             // 
-            this.stmCopyChannelCountFromFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmCopyChannelCountFromFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmCopyChannelCountFromFile.Location = new System.Drawing.Point(5, 348);
             this.stmCopyChannelCountFromFile.Name = "stmCopyChannelCountFromFile";
@@ -4103,7 +4110,7 @@ namespace Citric_Composer {
             // 
             // stmUpdateTrackInfo
             // 
-            this.stmUpdateTrackInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmUpdateTrackInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmUpdateTrackInfo.Location = new System.Drawing.Point(5, 115);
             this.stmUpdateTrackInfo.Name = "stmUpdateTrackInfo";
@@ -4115,7 +4122,7 @@ namespace Citric_Composer {
             // 
             // stmAllocateChannels
             // 
-            this.stmAllocateChannels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmAllocateChannels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmAllocateChannels.Location = new System.Drawing.Point(1, 304);
             this.stmAllocateChannels.Name = "stmAllocateChannels";
@@ -4126,7 +4133,7 @@ namespace Citric_Composer {
             // 
             // stmStreamType
             // 
-            this.stmStreamType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmStreamType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmStreamType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stmStreamType.FormattingEnabled = true;
@@ -4143,7 +4150,7 @@ namespace Citric_Composer {
             // 
             // label57
             // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label57.Location = new System.Drawing.Point(2, 260);
             this.label57.Name = "label57";
@@ -4176,7 +4183,7 @@ namespace Citric_Composer {
             // 
             // stmCopyExtensionFromFile
             // 
-            this.stmCopyExtensionFromFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmCopyExtensionFromFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmCopyExtensionFromFile.Location = new System.Drawing.Point(1, 113);
             this.stmCopyExtensionFromFile.Name = "stmCopyExtensionFromFile";
@@ -4188,7 +4195,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel28
             // 
-            this.tableLayoutPanel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel28.ColumnCount = 4;
             this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -4320,7 +4327,7 @@ namespace Citric_Composer {
             // 
             // label58
             // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label58.Location = new System.Drawing.Point(-1, 156);
             this.label58.Name = "label58";
@@ -4331,7 +4338,7 @@ namespace Citric_Composer {
             // 
             // stmPrefetchFileIdBox
             // 
-            this.stmPrefetchFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmPrefetchFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmPrefetchFileIdBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stmPrefetchFileIdBox.FormattingEnabled = true;
@@ -4343,7 +4350,7 @@ namespace Citric_Composer {
             // 
             // stmCreateUniquePrefetchFile
             // 
-            this.stmCreateUniquePrefetchFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmCreateUniquePrefetchFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmCreateUniquePrefetchFile.Location = new System.Drawing.Point(0, 231);
             this.stmCreateUniquePrefetchFile.Name = "stmCreateUniquePrefetchFile";
@@ -4355,7 +4362,7 @@ namespace Citric_Composer {
             // 
             // stmUpdatePrefetchInfo
             // 
-            this.stmUpdatePrefetchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmUpdatePrefetchInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmUpdatePrefetchInfo.Location = new System.Drawing.Point(0, 205);
             this.stmUpdatePrefetchInfo.Name = "stmUpdatePrefetchInfo";
@@ -4367,7 +4374,7 @@ namespace Citric_Composer {
             // 
             // stmLoopEndFrame
             // 
-            this.stmLoopEndFrame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmLoopEndFrame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmLoopEndFrame.Location = new System.Drawing.Point(1, 90);
             this.stmLoopEndFrame.Maximum = new decimal(new int[] {
@@ -4382,7 +4389,7 @@ namespace Citric_Composer {
             // 
             // label59
             // 
-            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label59.Location = new System.Drawing.Point(1, 70);
             this.label59.Name = "label59";
@@ -4393,7 +4400,7 @@ namespace Citric_Composer {
             // 
             // stmLoopStartFrame
             // 
-            this.stmLoopStartFrame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmLoopStartFrame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmLoopStartFrame.Location = new System.Drawing.Point(1, 45);
             this.stmLoopStartFrame.Maximum = new decimal(new int[] {
@@ -4408,7 +4415,7 @@ namespace Citric_Composer {
             // 
             // label60
             // 
-            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label60.Location = new System.Drawing.Point(0, 25);
             this.label60.Name = "label60";
@@ -4441,7 +4448,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel30
             // 
-            this.tableLayoutPanel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel30.ColumnCount = 1;
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -4457,7 +4464,7 @@ namespace Citric_Composer {
             // 
             // stmPlay
             // 
-            this.stmPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.stmPlay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stmPlay.Location = new System.Drawing.Point(3, 30);
             this.stmPlay.Name = "stmPlay";
@@ -4479,7 +4486,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel31
             // 
-            this.tableLayoutPanel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel31.ColumnCount = 2;
             this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -4517,7 +4524,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel32
             // 
-            this.tableLayoutPanel32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel32.ColumnCount = 3;
             this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -4588,8 +4595,8 @@ namespace Citric_Composer {
             // 
             // soundGrpGridTable
             // 
-            this.soundGrpGridTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.soundGrpGridTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.soundGrpGridTable.ColumnCount = 1;
             this.soundGrpGridTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -4643,7 +4650,7 @@ namespace Citric_Composer {
             // 
             // soundGrpEndIndex
             // 
-            this.soundGrpEndIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.soundGrpEndIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.soundGrpEndIndex.Location = new System.Drawing.Point(5, 114);
             this.soundGrpEndIndex.Maximum = new decimal(new int[] {
@@ -4658,7 +4665,7 @@ namespace Citric_Composer {
             // 
             // label36
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label36.Location = new System.Drawing.Point(5, 91);
             this.label36.Name = "label36";
@@ -4669,7 +4676,7 @@ namespace Citric_Composer {
             // 
             // soundGrpStartIndex
             // 
-            this.soundGrpStartIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.soundGrpStartIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.soundGrpStartIndex.Location = new System.Drawing.Point(5, 69);
             this.soundGrpStartIndex.Maximum = new decimal(new int[] {
@@ -4684,7 +4691,7 @@ namespace Citric_Composer {
             // 
             // label37
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.Location = new System.Drawing.Point(2, 50);
             this.label37.Name = "label37";
@@ -4695,7 +4702,7 @@ namespace Citric_Composer {
             // 
             // soundGrpSoundType
             // 
-            this.soundGrpSoundType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.soundGrpSoundType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.soundGrpSoundType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.soundGrpSoundType.Enabled = false;
@@ -4711,7 +4718,7 @@ namespace Citric_Composer {
             // 
             // label38
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.Location = new System.Drawing.Point(3, 3);
             this.label38.Name = "label38";
@@ -4790,7 +4797,7 @@ namespace Citric_Composer {
             // 
             // label35
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label35.Location = new System.Drawing.Point(8, 46);
             this.label35.Name = "label35";
@@ -4811,7 +4818,7 @@ namespace Citric_Composer {
             // 
             // label33
             // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.Location = new System.Drawing.Point(9, 4);
             this.label33.Name = "label33";
@@ -4822,7 +4829,7 @@ namespace Citric_Composer {
             // 
             // sarWarFileIdBox
             // 
-            this.sarWarFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarWarFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarWarFileIdBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarWarFileIdBox.FormattingEnabled = true;
@@ -4834,7 +4841,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel17
             // 
-            this.tableLayoutPanel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel17.ColumnCount = 2;
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -4907,7 +4914,7 @@ namespace Citric_Composer {
             // 
             // sarGrpFileIdBox
             // 
-            this.sarGrpFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sarGrpFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sarGrpFileIdBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarGrpFileIdBox.FormattingEnabled = true;
@@ -4919,7 +4926,7 @@ namespace Citric_Composer {
             // 
             // fileIdLabel
             // 
-            this.fileIdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fileIdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fileIdLabel.Location = new System.Drawing.Point(8, 4);
             this.fileIdLabel.Name = "fileIdLabel";
@@ -4944,7 +4951,7 @@ namespace Citric_Composer {
             // 
             // playerEnableSoundLimitBox
             // 
-            this.playerEnableSoundLimitBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.playerEnableSoundLimitBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.playerEnableSoundLimitBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.playerEnableSoundLimitBox.Location = new System.Drawing.Point(4, 67);
@@ -4956,7 +4963,7 @@ namespace Citric_Composer {
             // 
             // playerHeapSizeBox
             // 
-            this.playerHeapSizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.playerHeapSizeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.playerHeapSizeBox.Location = new System.Drawing.Point(5, 119);
             this.playerHeapSizeBox.Maximum = new decimal(new int[] {
@@ -4971,7 +4978,7 @@ namespace Citric_Composer {
             // 
             // label27
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.Location = new System.Drawing.Point(5, 95);
             this.label27.Name = "label27";
@@ -4982,7 +4989,7 @@ namespace Citric_Composer {
             // 
             // label28
             // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.Location = new System.Drawing.Point(3, 50);
             this.label28.Name = "label28";
@@ -4993,7 +5000,7 @@ namespace Citric_Composer {
             // 
             // playerSoundLimitBox
             // 
-            this.playerSoundLimitBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.playerSoundLimitBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.playerSoundLimitBox.Location = new System.Drawing.Point(4, 26);
             this.playerSoundLimitBox.Maximum = new decimal(new int[] {
@@ -5008,7 +5015,7 @@ namespace Citric_Composer {
             // 
             // label29
             // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.Location = new System.Drawing.Point(3, 3);
             this.label29.Name = "label29";
@@ -5058,7 +5065,7 @@ namespace Citric_Composer {
             // 
             // optionsPIBox
             // 
-            this.optionsPIBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.optionsPIBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.optionsPIBox.Location = new System.Drawing.Point(7, 409);
             this.optionsPIBox.Maximum = new decimal(new int[] {
@@ -5073,7 +5080,7 @@ namespace Citric_Composer {
             // 
             // optionsPILabel
             // 
-            this.optionsPILabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.optionsPILabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.optionsPILabel.Location = new System.Drawing.Point(11, 384);
             this.optionsPILabel.Name = "optionsPILabel";
@@ -5084,7 +5091,7 @@ namespace Citric_Composer {
             // 
             // streamBufferTimesBox
             // 
-            this.streamBufferTimesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.streamBufferTimesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.streamBufferTimesBox.Location = new System.Drawing.Point(7, 361);
             this.streamBufferTimesBox.Maximum = new decimal(new int[] {
@@ -5099,7 +5106,7 @@ namespace Citric_Composer {
             // 
             // streamBufferTimesLabel
             // 
-            this.streamBufferTimesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.streamBufferTimesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.streamBufferTimesLabel.Location = new System.Drawing.Point(11, 336);
             this.streamBufferTimesLabel.Name = "streamBufferTimesLabel";
@@ -5110,7 +5117,7 @@ namespace Citric_Composer {
             // 
             // maxWaveNumTracksBox
             // 
-            this.maxWaveNumTracksBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxWaveNumTracksBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxWaveNumTracksBox.Location = new System.Drawing.Point(7, 313);
             this.maxWaveNumTracksBox.Maximum = new decimal(new int[] {
@@ -5125,7 +5132,7 @@ namespace Citric_Composer {
             // 
             // maxWaveNumTracksLabel
             // 
-            this.maxWaveNumTracksLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxWaveNumTracksLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxWaveNumTracksLabel.Location = new System.Drawing.Point(11, 288);
             this.maxWaveNumTracksLabel.Name = "maxWaveNumTracksLabel";
@@ -5136,7 +5143,7 @@ namespace Citric_Composer {
             // 
             // maxWaveNumBox
             // 
-            this.maxWaveNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxWaveNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxWaveNumBox.Location = new System.Drawing.Point(7, 265);
             this.maxWaveNumBox.Maximum = new decimal(new int[] {
@@ -5151,7 +5158,7 @@ namespace Citric_Composer {
             // 
             // maxWaveNumLabel
             // 
-            this.maxWaveNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxWaveNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxWaveNumLabel.Location = new System.Drawing.Point(11, 240);
             this.maxWaveNumLabel.Name = "maxWaveNumLabel";
@@ -5162,7 +5169,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumChannelsBox
             // 
-            this.maxStreamNumChannelsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumChannelsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumChannelsBox.Location = new System.Drawing.Point(7, 217);
             this.maxStreamNumChannelsBox.Maximum = new decimal(new int[] {
@@ -5177,7 +5184,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumChannelsLabel
             // 
-            this.maxStreamNumChannelsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumChannelsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumChannelsLabel.Location = new System.Drawing.Point(11, 192);
             this.maxStreamNumChannelsLabel.Name = "maxStreamNumChannelsLabel";
@@ -5188,7 +5195,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumTracksBox
             // 
-            this.maxStreamNumTracksBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumTracksBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumTracksBox.Location = new System.Drawing.Point(7, 169);
             this.maxStreamNumTracksBox.Maximum = new decimal(new int[] {
@@ -5203,7 +5210,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumTracksLabel
             // 
-            this.maxStreamNumTracksLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumTracksLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumTracksLabel.Location = new System.Drawing.Point(11, 144);
             this.maxStreamNumTracksLabel.Name = "maxStreamNumTracksLabel";
@@ -5214,7 +5221,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumBox
             // 
-            this.maxStreamNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumBox.Location = new System.Drawing.Point(7, 121);
             this.maxStreamNumBox.Maximum = new decimal(new int[] {
@@ -5229,7 +5236,7 @@ namespace Citric_Composer {
             // 
             // maxStreamNumLabel
             // 
-            this.maxStreamNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxStreamNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxStreamNumLabel.Location = new System.Drawing.Point(11, 96);
             this.maxStreamNumLabel.Name = "maxStreamNumLabel";
@@ -5240,7 +5247,7 @@ namespace Citric_Composer {
             // 
             // maxSeqTrackNumBox
             // 
-            this.maxSeqTrackNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxSeqTrackNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxSeqTrackNumBox.Location = new System.Drawing.Point(7, 73);
             this.maxSeqTrackNumBox.Maximum = new decimal(new int[] {
@@ -5255,7 +5262,7 @@ namespace Citric_Composer {
             // 
             // maxSeqTrackNumLabel
             // 
-            this.maxSeqTrackNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxSeqTrackNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxSeqTrackNumLabel.Location = new System.Drawing.Point(11, 48);
             this.maxSeqTrackNumLabel.Name = "maxSeqTrackNumLabel";
@@ -5266,7 +5273,7 @@ namespace Citric_Composer {
             // 
             // maxSeqNumBox
             // 
-            this.maxSeqNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxSeqNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxSeqNumBox.Location = new System.Drawing.Point(7, 25);
             this.maxSeqNumBox.Maximum = new decimal(new int[] {
@@ -5281,7 +5288,7 @@ namespace Citric_Composer {
             // 
             // maxSeqNumLabel
             // 
-            this.maxSeqNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.maxSeqNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maxSeqNumLabel.Location = new System.Drawing.Point(11, 0);
             this.maxSeqNumLabel.Name = "maxSeqNumLabel";
@@ -5444,7 +5451,7 @@ namespace Citric_Composer {
             // 
             // grpDepLoadFlagsBox
             // 
-            this.grpDepLoadFlagsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDepLoadFlagsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDepLoadFlagsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grpDepLoadFlagsBox.FormattingEnabled = true;
@@ -5456,7 +5463,7 @@ namespace Citric_Composer {
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.Location = new System.Drawing.Point(2, 124);
             this.label17.Name = "label17";
@@ -5467,7 +5474,7 @@ namespace Citric_Composer {
             // 
             // grpDepEntryNumBox
             // 
-            this.grpDepEntryNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDepEntryNumBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDepEntryNumBox.Location = new System.Drawing.Point(6, 101);
             this.grpDepEntryNumBox.Maximum = new decimal(new int[] {
@@ -5482,7 +5489,7 @@ namespace Citric_Composer {
             // 
             // grpDepEntryNumComboBox
             // 
-            this.grpDepEntryNumComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDepEntryNumComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDepEntryNumComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grpDepEntryNumComboBox.FormattingEnabled = true;
@@ -5494,7 +5501,7 @@ namespace Citric_Composer {
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.Location = new System.Drawing.Point(3, 52);
             this.label16.Name = "label16";
@@ -5505,7 +5512,7 @@ namespace Citric_Composer {
             // 
             // grpDepEntryTypeBox
             // 
-            this.grpDepEntryTypeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDepEntryTypeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDepEntryTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grpDepEntryTypeBox.FormattingEnabled = true;
@@ -5522,7 +5529,7 @@ namespace Citric_Composer {
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.Location = new System.Drawing.Point(3, 4);
             this.label15.Name = "label15";
@@ -5546,7 +5553,7 @@ namespace Citric_Composer {
             // 
             // grpEmbedModeBox
             // 
-            this.grpEmbedModeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpEmbedModeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpEmbedModeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grpEmbedModeBox.FormattingEnabled = true;
@@ -5561,7 +5568,7 @@ namespace Citric_Composer {
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.Location = new System.Drawing.Point(3, 75);
             this.label14.Name = "label14";
@@ -5572,7 +5579,7 @@ namespace Citric_Composer {
             // 
             // grpFileIdBox
             // 
-            this.grpFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpFileIdBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpFileIdBox.Location = new System.Drawing.Point(6, 52);
             this.grpFileIdBox.Maximum = new decimal(new int[] {
@@ -5587,7 +5594,7 @@ namespace Citric_Composer {
             // 
             // grpFileIdComboBox
             // 
-            this.grpFileIdComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpFileIdComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpFileIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.grpFileIdComboBox.FormattingEnabled = true;
@@ -5599,7 +5606,7 @@ namespace Citric_Composer {
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.Location = new System.Drawing.Point(3, 5);
             this.label13.Name = "label13";
@@ -5635,7 +5642,7 @@ namespace Citric_Composer {
             // 
             // grpStpForceButton
             // 
-            this.grpStpForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpStpForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpStpForceButton.Location = new System.Drawing.Point(3, 437);
             this.grpStpForceButton.Name = "grpStpForceButton";
@@ -5647,7 +5654,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -5711,7 +5718,7 @@ namespace Citric_Composer {
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.Location = new System.Drawing.Point(1, 382);
             this.label12.Name = "label12";
@@ -5723,7 +5730,7 @@ namespace Citric_Composer {
             // 
             // grpWsdForceButton
             // 
-            this.grpWsdForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpWsdForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpWsdForceButton.Location = new System.Drawing.Point(3, 359);
             this.grpWsdForceButton.Name = "grpWsdForceButton";
@@ -5735,7 +5742,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -5799,7 +5806,7 @@ namespace Citric_Composer {
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.Location = new System.Drawing.Point(1, 301);
             this.label11.Name = "label11";
@@ -5811,7 +5818,7 @@ namespace Citric_Composer {
             // 
             // grpWarForceButton
             // 
-            this.grpWarForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpWarForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpWarForceButton.Location = new System.Drawing.Point(3, 275);
             this.grpWarForceButton.Name = "grpWarForceButton";
@@ -5823,7 +5830,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -5886,7 +5893,7 @@ namespace Citric_Composer {
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Location = new System.Drawing.Point(0, 220);
             this.label10.Name = "label10";
@@ -5898,7 +5905,7 @@ namespace Citric_Composer {
             // 
             // grpBnkForceButton
             // 
-            this.grpBnkForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpBnkForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBnkForceButton.Location = new System.Drawing.Point(3, 194);
             this.grpBnkForceButton.Name = "grpBnkForceButton";
@@ -5910,7 +5917,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -5973,7 +5980,7 @@ namespace Citric_Composer {
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Location = new System.Drawing.Point(0, 136);
             this.label9.Name = "label9";
@@ -5985,7 +5992,7 @@ namespace Citric_Composer {
             // 
             // grpSeqForceButton
             // 
-            this.grpSeqForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpSeqForceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpSeqForceButton.Location = new System.Drawing.Point(3, 110);
             this.grpSeqForceButton.Name = "grpSeqForceButton";
@@ -5997,7 +6004,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -6060,7 +6067,7 @@ namespace Citric_Composer {
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.Location = new System.Drawing.Point(3, 52);
             this.label7.Name = "label7";
@@ -6072,7 +6079,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -6135,7 +6142,7 @@ namespace Citric_Composer {
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
@@ -6160,7 +6167,7 @@ namespace Citric_Composer {
             // 
             // forceWaveVersionButton
             // 
-            this.forceWaveVersionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.forceWaveVersionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forceWaveVersionButton.Location = new System.Drawing.Point(3, 110);
             this.forceWaveVersionButton.Name = "forceWaveVersionButton";
@@ -6172,7 +6179,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -6235,7 +6242,7 @@ namespace Citric_Composer {
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Location = new System.Drawing.Point(3, 52);
             this.label6.Name = "label6";
@@ -6247,7 +6254,7 @@ namespace Citric_Composer {
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -6310,7 +6317,7 @@ namespace Citric_Composer {
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
@@ -6332,7 +6339,7 @@ namespace Citric_Composer {
             // 
             // versionGrid
             // 
-            this.versionGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.versionGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.versionGrid.ColumnCount = 3;
             this.versionGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -6392,7 +6399,7 @@ namespace Citric_Composer {
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
@@ -6992,7 +6999,8 @@ namespace Citric_Composer {
         /// <param name="description">File description.</param>
         /// <param name="extension">File extension.</param>
         /// <returns>Path of the file to open.</returns>
-        public string GetFileOpenerPath(string description, string extension) {
+        public string GetFileOpenerPath(string description, string extension)
+        {
 
             //Set filer.
             openFileDialog.FileName = "";
@@ -7010,41 +7018,49 @@ namespace Citric_Composer {
         /// <param name="description">File description.</param>
         /// <param name="extension">File extension.</param>
         /// <returns>Path of the file to save.</returns>
-        public string GetFileSaverPath(string description, string extension, ref WriteMode writeMode) {
+        public string GetFileSaverPath(string description, string extension, ref WriteMode writeMode)
+        {
 
             //Set filer.
             saveFileDialog.FileName = "";
             saveFileDialog.Filter = description + " (3ds或WiiU)|" + "*.bf" + extension.ToLower() + ";*.bc" + extension.ToLower() + "|" + description + " (Switch)|*.bf" + extension.ToLower();
-            saveFileDialog.ShowDialog();            
+            saveFileDialog.ShowDialog();
 
             //Set write mode.
-            if (saveFileDialog.FileName != "") {
+            if (saveFileDialog.FileName != "")
+            {
 
                 //Fix extension.
-                if (Path.GetExtension(saveFileDialog.FileName) == "") {
+                if (Path.GetExtension(saveFileDialog.FileName) == "")
+                {
                     saveFileDialog.FileName += ".bf" + extension.ToLower();
                 }
 
                 //3ds or WiiU.
-                if (saveFileDialog.FilterIndex == 1) {
+                if (saveFileDialog.FilterIndex == 1)
+                {
 
                     //3ds.
-                    if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bc")) {
+                    if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bc"))
+                    {
                         writeMode = WriteMode.CTR;
                     }
 
                     //WiiU.
-                    else if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bf")) {
+                    else if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bf"))
+                    {
                         writeMode = WriteMode.Cafe;
                     }
 
                 }
 
                 //Switch.
-                else {
+                else
+                {
 
                     //Switch.
-                    if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bf")) {
+                    if (Path.GetExtension(saveFileDialog.FileName).StartsWith(".bf"))
+                    {
                         writeMode = WriteMode.NX;
                     }
 
@@ -7060,20 +7076,23 @@ namespace Citric_Composer {
         /// <summary>
         /// On closing hook.
         /// </summary>
-        private void form_Close(object sender, FormClosingEventArgs e) {
+        private void form_Close(object sender, FormClosingEventArgs e)
+        {
             OnClosing();
         }
 
         /// <summary>
         /// On closing.
         /// </summary>
-        public virtual void OnClosing() {}
+        public virtual void OnClosing() { }
 
-        public ContextMenuStrip CreateMenuStrip(ContextMenuStrip orig, int[] indices, EventHandler[] eventHandlers) {
+        public ContextMenuStrip CreateMenuStrip(ContextMenuStrip orig, int[] indices, EventHandler[] eventHandlers)
+        {
 
             ContextMenuStrip c = new ContextMenuStrip();
 
-            foreach (int ind in indices) {
+            foreach (int ind in indices)
+            {
 
                 var i = orig.Items[ind];
                 c.Items.Add(i.Text, i.Image, eventHandlers[ind]);
@@ -7090,18 +7109,22 @@ namespace Citric_Composer {
         /// <summary>
         /// Do the info stuff on node selected.
         /// </summary>
-        public virtual void DoInfoStuff() {
+        public virtual void DoInfoStuff()
+        {
 
             //Fix selected node issue.
-            if (tree.SelectedNode == null) {
+            if (tree.SelectedNode == null)
+            {
                 tree.SelectedNode = tree.Nodes[0];
             }
 
             //File open.
-            if (FileOpen) {
+            if (FileOpen)
+            {
 
                 //File is null.
-                if (File == null) {
+                if (File == null)
+                {
 
                     //Show null info panel.
                     nullFilePanel.BringToFront();
@@ -7113,10 +7136,12 @@ namespace Citric_Composer {
                 }
 
                 //File is valid.
-                else {
+                else
+                {
 
                     //If the file info node is selected.
-                    if (tree.SelectedNode.Index == 0 && tree.SelectedNode.Parent == null) {
+                    if (tree.SelectedNode.Index == 0 && tree.SelectedNode.Parent == null)
+                    {
 
                         //Display the file info.
                         genericFileInfoPanel.BringToFront();
@@ -7132,7 +7157,8 @@ namespace Citric_Composer {
             }
 
             //No file open.
-            else {
+            else
+            {
 
                 //Show no info panel.
                 noInfoPanel.BringToFront();
@@ -7150,8 +7176,9 @@ namespace Citric_Composer {
 
         /// <summary>
         /// Begin the updating of nodes.
-        /// </summary>
-        public void BeginUpdateNodes() {
+        /// </summary>     
+        public void BeginUpdateNodes()
+        {
 
             //Begin update.
             tree.BeginUpdate();
@@ -7160,20 +7187,23 @@ namespace Citric_Composer {
             expandedNodes = collectExpandedNodes(tree.Nodes);
 
             //Safety.
-            if (tree.SelectedNode == null) {
+            if (tree.SelectedNode == null)
+            {
                 tree.SelectedNode = tree.Nodes[0];
             }
 
             //Get the selected index.
             nodeIndices = new Stack<int>();
             nodeIndices.Push(tree.SelectedNode.Index);
-            while (tree.SelectedNode.Parent != null) {
+            while (tree.SelectedNode.Parent != null)
+            {
                 tree.SelectedNode = tree.SelectedNode.Parent;
                 nodeIndices.Push(tree.SelectedNode.Index);
             }
 
             //Clear each node.
-            for (int i = 1; i < tree.Nodes.Count; i++) {
+            for (int i = 1; i < tree.Nodes.Count; i++)
+            {
                 tree.Nodes[i].Nodes.Clear();
             }
 
@@ -7187,12 +7217,15 @@ namespace Citric_Composer {
         /// <summary>
         /// Complete the updating of nodes.
         /// </summary>
-        public void EndUpdateNodes() {
+        public void EndUpdateNodes()
+        {
 
             //Restore the expanded nodes if they exist.
-            if (expandedNodes.Count > 0) {
+            if (expandedNodes.Count > 0)
+            {
                 TreeNode IamExpandedNode;
-                for (int i = 0; i < expandedNodes.Count; i++) {
+                for (int i = 0; i < expandedNodes.Count; i++)
+                {
                     IamExpandedNode = FindNodeByName(tree.Nodes, expandedNodes[i]);
                     expandNodePath(IamExpandedNode);
                 }
@@ -7201,10 +7234,14 @@ namespace Citric_Composer {
 
             //Set the selected node.
             tree.SelectedNode = tree.Nodes[nodeIndices.Pop()];
-            while (nodeIndices.Count > 0) {
-                try {
+            while (nodeIndices.Count > 0)
+            {
+                try
+                {
                     tree.SelectedNode = tree.SelectedNode.Nodes[nodeIndices.Pop()];
-                } catch {
+                }
+                catch
+                {
                     nodeIndices.Clear();
                 }
             }
@@ -7224,96 +7261,80 @@ namespace Citric_Composer {
         //New.
         public virtual void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+
+            //File open and can save test.
+            if (!FileTest(sender, e, true))
             {
-                if (!FileTest(sender, e, true))
-                {
-                    return;
-                }
-
-                if (FileType == null)
-                {
-                    MessageBox.Show("文件类型未设置!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                File = (ISoundFile)Activator.CreateInstance(FileType);
-                if (File == null)
-                {
-                    MessageBox.Show("创建文件实例失败!", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (File is Group group)
-                {
-                    group.Version = new FileWriter.Version(1, 0, 0);
-                }
-
-                FilePath = "";
-                FileOpen = true;
-                ExtFile = null;
-                Text = EditorName + "-新建" + ExtensionDescription + ".bf" + Extension;
-
-                UpdateNodes();
-                DoInfoStuff();
+                return;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"创建新文件时出错: {ex.Message}\n\n堆栈跟踪:\n{ex.StackTrace}",
-                               "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            //Create instance of file.
+            File = (ISoundFile)Activator.CreateInstance(FileType);
+
+            //Reset values.
+            FilePath = "";
+            FileOpen = true;
+            ExtFile = null;
+            Text = EditorName + "-新建" + ExtensionDescription + ".bf" + Extension;
+
+            //Update.
+            UpdateNodes();
+            DoInfoStuff();
+
         }
 
         //Open.
         public virtual void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            //File open and save test.
             if (!FileTest(sender, e, true))
-                return;
-
-            string path = GetFileOpenerPath(ExtensionDescription, Extension);
-            if (string.IsNullOrEmpty(path))
-                return;
-
-            try
             {
-                if (!System.IO.File.Exists(path))
-                {
-                    MessageBox.Show("文件不存在", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                return;
+            }
 
+            //Open the file.
+            string path = GetFileOpenerPath(ExtensionDescription, Extension);
+
+            //File is not null.
+            if (path != "")
+            {
+
+                //Set value.
                 File = (ISoundFile)Activator.CreateInstance(FileType);
-                using (var fs = new FileStream(path, FileMode.Open))
-                using (var br = new BinaryDataReader(fs))
-                {
-                    File.Read(br);
-                }
-
+                ExtFile = null;
                 FilePath = path;
-                Text = $"{EditorName} - {Path.GetFileName(path)}";
+                Text = EditorName + " - " + Path.GetFileName(path);
                 FileOpen = true;
 
+                //Read data.
+                MemoryStream src = new MemoryStream(System.IO.File.ReadAllBytes(path));
+                BinaryDataReader br = new BinaryDataReader(src);
+                File.Read(br);
+                try { br.Dispose(); } catch { }
+                try { src.Dispose(); } catch { }
+
+                //Update.
                 UpdateNodes();
                 DoInfoStuff();
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"加载失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                File = null;
-                FileOpen = false;
-            }
+
         }
 
         //Save.
-        public virtual void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+        public virtual void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open test.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
             //No where to save.
-            if (ExtFile == null && FilePath == "") {
+            if (ExtFile == null && FilePath == "")
+            {
 
                 //Save as.
                 saveAsToolStripMenuItem_Click(sender, e);
@@ -7324,17 +7345,20 @@ namespace Citric_Composer {
             }
 
             //External file is not null.
-            if (ExtFile != null) {
+            if (ExtFile != null)
+            {
 
                 //Set the file.
                 ExtFile.File = File;
 
                 //Update the main window.
-                if (MainWindow != null) {
+                if (MainWindow != null)
+                {
                     MainWindow.UpdateNodes();
                     MainWindow.DoInfoStuff();
                 }
-                if (OtherEditor != null) {
+                if (OtherEditor != null)
+                {
                     OtherEditor.UpdateNodes();
                     OtherEditor.DoInfoStuff();
                 }
@@ -7342,7 +7366,8 @@ namespace Citric_Composer {
             }
 
             //External file is null.
-            else {
+            else
+            {
 
                 //Write the file.
                 MemoryStream o = new MemoryStream();
@@ -7359,10 +7384,12 @@ namespace Citric_Composer {
         }
 
         //Save as.
-        public void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
+        public void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open test.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
@@ -7370,7 +7397,8 @@ namespace Citric_Composer {
             string path = GetFileSaverPath(ExtensionDescription, Extension, ref WriteMode);
 
             //If the path is valid.
-            if (path != "") {
+            if (path != "")
+            {
 
                 //Set values.
                 FilePath = path;
@@ -7385,10 +7413,12 @@ namespace Citric_Composer {
         }
 
         //Close.
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open and can save test.
-            if (!FileTest(sender, e, true, true)) {
+            if (!FileTest(sender, e, true, true))
+            {
                 return;
             }
 
@@ -7406,13 +7436,17 @@ namespace Citric_Composer {
         }
 
         //Quit.
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Quit if wanted.
-            if (FileOpen) {
+            if (FileOpen)
+            {
                 SaveQuitDialog q = new SaveQuitDialog(this);
                 q.ShowDialog();
-            } else {
+            }
+            else
+            {
                 Close();
             }
 
@@ -7425,10 +7459,12 @@ namespace Citric_Composer {
         #region editMenu
 
         //Blank the file.
-        private void blankFileToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void blankFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open save test.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
@@ -7442,10 +7478,12 @@ namespace Citric_Composer {
         }
 
         //Import data from another file.
-        private void importFileToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void importFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open test.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
@@ -7453,7 +7491,8 @@ namespace Citric_Composer {
             string path = GetFileOpenerPath(ExtensionDescription, Extension);
 
             //File is not null.
-            if (path != "") {
+            if (path != "")
+            {
 
                 //Set value.
                 File = (ISoundFile)Activator.CreateInstance(FileType);
@@ -7472,10 +7511,12 @@ namespace Citric_Composer {
         }
 
         //Export data to somewhere.
-        private void exportFileToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void exportFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
@@ -7484,7 +7525,8 @@ namespace Citric_Composer {
             string path = GetFileSaverPath(ExtensionDescription, Extension, ref wM);
 
             //If the path is valid.
-            if (path != "") {
+            if (path != "")
+            {
 
                 //Write the file.
                 MemoryStream o = new MemoryStream();
@@ -7501,15 +7543,18 @@ namespace Citric_Composer {
         }
 
         //Set file data to null.
-        private void nullifyFileToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void nullifyFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //File open test.
-            if (!FileTest(sender, e, false, true)) {
+            if (!FileTest(sender, e, false, true))
+            {
                 return;
             }
 
             //External file cannot be null.
-            if (ExtFile == null) {
+            if (ExtFile == null)
+            {
 
                 //Call out the user.
                 MessageBox.Show("你不能使不在父文件中的数据无效!", "通知:");
@@ -7529,16 +7574,20 @@ namespace Citric_Composer {
         /// <summary>
         /// Returns true if the user wants to continue.
         /// </summary>
-        public bool FileTest(object sender, EventArgs e, bool save, bool forceOpen = false) {
+        public bool FileTest(object sender, EventArgs e, bool save, bool forceOpen = false)
+        {
 
             //File is open.
-            if (FileOpen) {
+            if (FileOpen)
+            {
 
                 //Ask user if they want to save.
-                if (save) {
+                if (save)
+                {
 
                     SaveCloseDialog c = new SaveCloseDialog();
-                    switch (c.getValue()) {
+                    switch (c.getValue())
+                    {
 
                         //Save.
                         case 0:
@@ -7560,12 +7609,17 @@ namespace Citric_Composer {
                 //Passed test.
                 return true;
 
-            } else {
+            }
+            else
+            {
 
-                if (forceOpen) {
+                if (forceOpen)
+                {
                     MessageBox.Show("必须有一个打开的文件才能执行此操作!", "通知:");
                     return false;
-                } else {
+                }
+                else
+                {
                     return true;
                 }
 
@@ -7580,14 +7634,17 @@ namespace Citric_Composer {
         #region nodeShit
 
         //Expand node and parents.
-        void expandNodePath(TreeNode node) {
+        void expandNodePath(TreeNode node)
+        {
             if (node == null)
                 return;
             if (node.Level != 0) //check if it is not root
             {
                 node.Expand();
                 expandNodePath(node.Parent);
-            } else {
+            }
+            else
+            {
                 node.Expand(); // this is root 
             }
 
@@ -7598,54 +7655,62 @@ namespace Citric_Composer {
         //Make right click actually select, and show infoViewer.
         void tree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            try
+            if (e.Button == MouseButtons.Right)
             {
                 // Select the clicked node
                 tree.SelectedNode = tree.GetNodeAt(e.X, e.Y);
-
-                if (FileOpen && File != null && tree.SelectedNode != null)
-                {
-                    DoInfoStuff();
-                }
             }
-            catch (Exception ex)
+            else if (e.Button == MouseButtons.Left)
             {
-                Debug.WriteLine($"Error in tree_NodeMouseClick: {ex.Message}");
+                // Select the clicked node
+                tree.SelectedNode = tree.GetNodeAt(e.X, e.Y);
             }
+
+            DoInfoStuff();
+
         }
 
         void tree_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            try
+
+            //Select.
+            if (e.Button == MouseButtons.Right)
             {
+                // Select the clicked node
                 tree.SelectedNode = tree.GetNodeAt(e.X, e.Y);
-
-                if (FileOpen && File != null && tree.SelectedNode != null)
-                {
-                    DoInfoStuff();
-                    NodeMouseDoubleClick();
-                }
             }
-            catch (Exception ex)
+            else if (e.Button == MouseButtons.Left)
             {
-                Debug.WriteLine($"Error in tree_NodeMouseDoubleClick: {ex.Message}");
+                // Select the clicked node
+                tree.SelectedNode = tree.GetNodeAt(e.X, e.Y);
             }
+
+            //Do info stuff.
+            DoInfoStuff();
+
+            //Do double click action.
+            NodeMouseDoubleClick();
+
         }
 
-        public virtual void NodeMouseDoubleClick() {
+        public virtual void NodeMouseDoubleClick()
+        {
 
         }
 
-        void tree_NodeKey(object sender, KeyEventArgs e) {
+        void tree_NodeKey(object sender, KeyEventArgs e)
+        {
 
             DoInfoStuff();
 
         }
 
         //Get expanded nodes.
-        List<string> collectExpandedNodes(TreeNodeCollection Nodes) {
+        List<string> collectExpandedNodes(TreeNodeCollection Nodes)
+        {
             List<string> _lst = new List<string>();
-            foreach (TreeNode checknode in Nodes) {
+            foreach (TreeNode checknode in Nodes)
+            {
                 if (checknode.IsExpanded)
                     _lst.Add(checknode.Name);
                 if (checknode.Nodes.Count > 0)
@@ -7661,9 +7726,11 @@ namespace Citric_Composer {
         /// <param name="NodesCollection"></param>
         /// <param name="Name"></param>
         /// <returns></returns>
-        TreeNode FindNodeByName(TreeNodeCollection NodesCollection, string Name) {
+        TreeNode FindNodeByName(TreeNodeCollection NodesCollection, string Name)
+        {
             TreeNode returnNode = null; // Default value to return
-            foreach (TreeNode checkNode in NodesCollection) {
+            foreach (TreeNode checkNode in NodesCollection)
+            {
                 if (checkNode.Name == Name)  //checks if this node name is correct
                     returnNode = checkNode;
                 else if (checkNode.Nodes.Count > 0) //node has child
@@ -7688,23 +7755,26 @@ namespace Citric_Composer {
         #region soundPlayerDeluxe
 
         //Play.
-        private void playSoundTrack_Click(object sender, EventArgs e) {
+        private void playSoundTrack_Click(object sender, EventArgs e)
+        {
             Play();
         }
 
         //Pause.
-        private void pauseSoundTrack_Click(object sender, EventArgs e) {
+        private void pauseSoundTrack_Click(object sender, EventArgs e)
+        {
             Pause();
         }
 
         //Stop.
-        private void stopSoundTrack_Click(object sender, EventArgs e) {
+        private void stopSoundTrack_Click(object sender, EventArgs e)
+        {
             Stop();
         }
 
-        public virtual void Play() {}
-        public virtual void Pause() {}
-        public virtual void Stop() {}
+        public virtual void Play() { }
+        public virtual void Pause() { }
+        public virtual void Stop() { }
 
         #endregion
 
@@ -7712,11 +7782,12 @@ namespace Citric_Composer {
         //Other buttons.
         #region otherButtons
 
-        private void forceWaveVersionButton_Click(object sender, EventArgs e) {
+        private void forceWaveVersionButton_Click(object sender, EventArgs e)
+        {
             ForceWaveVersionButtonClick();
         }
 
-        public virtual void ForceWaveVersionButtonClick() {}
+        public virtual void ForceWaveVersionButtonClick() { }
 
         #endregion
 
@@ -7724,19 +7795,22 @@ namespace Citric_Composer {
         //Root menu.
         #region rootMenu
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             RootAdd();
         }
 
-        public void expandToolStripMenuItem_Click(object sender, EventArgs e) {
+        public void expandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             tree.SelectedNode.Expand();
         }
 
-        public void collapseToolStripMenuItem_Click(object sender, EventArgs e) {
+        public void collapseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             tree.SelectedNode.Collapse();
         }
 
-        public virtual void RootAdd() {}
+        public virtual void RootAdd() { }
 
         #endregion
 
@@ -7744,51 +7818,60 @@ namespace Citric_Composer {
         //Node menu.
         #region nodeMenu
 
-        public void addAboveToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void addAboveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeAddAbove();
         }
 
-        public void addBelowToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void addBelowToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeAddBelow();
         }
 
-        public void moveUpToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void moveUpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeMoveUp();
         }
 
-        public void moveDownToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void moveDownToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeMoveDown();
         }
 
-        public void blankToolStripMenuItem_Click(object sender, EventArgs e) {
+        public void blankToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             NodeBlank();
         }
 
-        public void replaceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+        public void replaceFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             NodeReplace();
         }
 
-        public void exportToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void exportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeExport();
         }
 
-        public void nullifyToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void nullifyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeNullify();
         }
 
-        public void deleteToolStripMenuItem1_Click(object sender, EventArgs e) {
+        public void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             NodeDelete();
         }
 
-        public virtual void NodeAddAbove() {}
-        public virtual void NodeAddBelow() {}
-        public virtual void NodeMoveUp() {}
-        public virtual void NodeMoveDown() {}
-        public virtual void NodeBlank() {}
-        public virtual void NodeReplace() {}
-        public virtual void NodeExport() {}
-        public virtual void NodeNullify() {}
-        public virtual void NodeDelete() {}
+        public virtual void NodeAddAbove() { }
+        public virtual void NodeAddBelow() { }
+        public virtual void NodeMoveUp() { }
+        public virtual void NodeMoveDown() { }
+        public virtual void NodeBlank() { }
+        public virtual void NodeReplace() { }
+        public virtual void NodeExport() { }
+        public virtual void NodeNullify() { }
+        public virtual void NodeDelete() { }
 
         /// <summary>
         /// Swap the a and b objects.
@@ -7796,10 +7879,12 @@ namespace Citric_Composer {
         /// <param name="objects">Objects list.</param>
         /// <param name="a">Object a to swap.</param>
         /// <param name="b">Object b to swap.</param>
-        public bool Swap<T>(IList<T> objects, int a, int b) {
+        public bool Swap<T>(IList<T> objects, int a, int b)
+        {
 
             //Make sure it is possible.
-            if (a < 0 || a >= objects.Count || b < 0 || b >= objects.Count) {
+            if (a < 0 || a >= objects.Count || b < 0 || b >= objects.Count)
+            {
                 return false;
             }
 
@@ -7817,36 +7902,42 @@ namespace Citric_Composer {
         //War boxes.
         #region warBoxes
 
-        private void vMajBoxWar_ValueChanged(object sender, EventArgs e) {
+        private void vMajBoxWar_ValueChanged(object sender, EventArgs e)
+        {
             BoxWarMajChanged();
         }
 
-        private void vMinBoxWar_ValueChanged(object sender, EventArgs e) {
+        private void vMinBoxWar_ValueChanged(object sender, EventArgs e)
+        {
             BoxWarMinChanged();
         }
 
-        private void vRevBoxWar_ValueChanged(object sender, EventArgs e) {
+        private void vRevBoxWar_ValueChanged(object sender, EventArgs e)
+        {
             BoxWarRevChanged();
         }
 
-        private void vWavMajBox_ValueChanged(object sender, EventArgs e) {
+        private void vWavMajBox_ValueChanged(object sender, EventArgs e)
+        {
             BoxWavMajChanged();
         }
 
-        private void vWavMinBox_ValueChanged(object sender, EventArgs e) {
+        private void vWavMinBox_ValueChanged(object sender, EventArgs e)
+        {
             BoxWavMinChanged();
         }
 
-        private void vWavRevBox_ValueChanged(object sender, EventArgs e) {
+        private void vWavRevBox_ValueChanged(object sender, EventArgs e)
+        {
             BoxWavRevChanged();
         }
 
-        public virtual void BoxWarMajChanged() {}
-        public virtual void BoxWarMinChanged() {}
-        public virtual void BoxWarRevChanged() {}
-        public virtual void BoxWavMajChanged() {}
-        public virtual void BoxWavMinChanged() {}
-        public virtual void BoxWavRevChanged() {}
+        public virtual void BoxWarMajChanged() { }
+        public virtual void BoxWarMinChanged() { }
+        public virtual void BoxWarRevChanged() { }
+        public virtual void BoxWavMajChanged() { }
+        public virtual void BoxWavMinChanged() { }
+        public virtual void BoxWavRevChanged() { }
 
         #endregion
 
@@ -7854,31 +7945,36 @@ namespace Citric_Composer {
         //War tools.
         #region warTools
 
-        private void batchExtractWavesToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void batchExtractWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WarExtractWave();
         }
 
-        private void batchExtract3dsWavesToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void batchExtract3dsWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WarExtractWave3ds();
         }
 
-        private void batchExtractWiiUWavesToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void batchExtractWiiUWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WarExtractWaveWiiU();
         }
 
-        private void batchExtractSwitchWavesToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void batchExtractSwitchWavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WarExtractWaveSwitch();
         }
 
-        private void batchImportToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void batchImportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WarBatchImport();
         }
 
-        public virtual void WarExtractWave() {}
-        public virtual void WarExtractWave3ds() {}
-        public virtual void WarExtractWaveWiiU() {}
-        public virtual void WarExtractWaveSwitch() {}
-        public virtual void WarBatchImport() {}
+        public virtual void WarExtractWave() { }
+        public virtual void WarExtractWave3ds() { }
+        public virtual void WarExtractWaveWiiU() { }
+        public virtual void WarExtractWaveSwitch() { }
+        public virtual void WarBatchImport() { }
 
         #endregion
 
@@ -7886,150 +7982,196 @@ namespace Citric_Composer {
         //Group versions.
         #region grpVersions
 
-        private void grpSeqForceButton_Click(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpSeqForceButton_Click(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupForceSequenceVersion();
             }
         }
 
-        private void grpBnkForceButton_Click(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpBnkForceButton_Click(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupForceBankVersion();
             }
         }
 
-        private void grpWarForceButton_Click(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWarForceButton_Click(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupForceWaveArchiveVersion();
             }
         }
 
-        private void grpWsdForceButton_Click(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWsdForceButton_Click(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupForceWaveSoundDataVersion();
             }
         }
 
-        private void grpStpForceButton_Click(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpStpForceButton_Click(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupForcePrefetchVersion();
             }
         }
 
-        private void grpMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpSeqMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpSeqMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpSeqMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpSeqMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpSeqRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpSeqRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpBnkMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpBnkMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpBnkMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpBnkMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpBnkRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpBnkRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWarMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWarMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWarMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWarMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWarRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWarRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWsdMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWsdMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWsdMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWsdMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpWsdRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpWsdRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpStpMajBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpStpMajBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpStpMinBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpStpMinBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        private void grpStpRevBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpStpRevBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupVersionChanged();
             }
         }
 
-        public virtual void GroupForceSequenceVersion() {}
-        public virtual void GroupForceBankVersion() {}
-        public virtual void GroupForceWaveArchiveVersion() {}
-        public virtual void GroupForceWaveSoundDataVersion() {}
-        public virtual void GroupForcePrefetchVersion() {}
-        public virtual void GroupVersionChanged() {}
+        public virtual void GroupForceSequenceVersion() { }
+        public virtual void GroupForceBankVersion() { }
+        public virtual void GroupForceWaveArchiveVersion() { }
+        public virtual void GroupForceWaveSoundDataVersion() { }
+        public virtual void GroupForcePrefetchVersion() { }
+        public virtual void GroupVersionChanged() { }
 
         #endregion
 
@@ -8037,27 +8179,33 @@ namespace Citric_Composer {
         //Group file data.
         #region grpFile
 
-        private void grpFileIdComboBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpFileIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupFileIdComboChanged();
             }
         }
 
-        private void grpFileIdBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpFileIdBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupFileIdNumBoxChanged();
             }
         }
 
-        private void grpEmbedModeBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpEmbedModeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupFileIdEmbedModeChanged();
             }
         }
 
-        public virtual void GroupFileIdComboChanged() {}
-        public virtual void GroupFileIdNumBoxChanged() {}
-        public virtual void GroupFileIdEmbedModeChanged() {}
+        public virtual void GroupFileIdComboChanged() { }
+        public virtual void GroupFileIdNumBoxChanged() { }
+        public virtual void GroupFileIdEmbedModeChanged() { }
 
         #endregion
 
@@ -8065,34 +8213,42 @@ namespace Citric_Composer {
         //Group dependency.
         #region grpDependency
 
-        private void grpDepEntryTypeBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpDepEntryTypeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupDependencyTypeChanged();
             }
         }
 
-        private void grpDepEntryNumComboBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpDepEntryNumComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupDependencyEntryComboChanged();
             }
         }
 
-        private void grpDepEntryNumBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpDepEntryNumBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupDependencyEntryNumBoxChanged();
             }
         }
 
-        private void grpDepLoadFlagsBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void grpDepLoadFlagsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 GroupDependencyFlagsChanged();
             }
         }
 
-        public virtual void GroupDependencyTypeChanged() {}
-        public virtual void GroupDependencyEntryComboChanged() {}
-        public virtual void GroupDependencyEntryNumBoxChanged() {}
-        public virtual void GroupDependencyFlagsChanged() {}
+        public virtual void GroupDependencyTypeChanged() { }
+        public virtual void GroupDependencyEntryComboChanged() { }
+        public virtual void GroupDependencyEntryNumBoxChanged() { }
+        public virtual void GroupDependencyFlagsChanged() { }
 
         #endregion
 
@@ -8100,14 +8256,16 @@ namespace Citric_Composer {
         //Launchers.
         #region Launchers
 
-        private void SolarAudioSlayerToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SolarAudioSlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start audio slayer.
             Process.Start("Solar Audio Slayer.exe");
 
         }
 
-        private void IsabelleSoundEditorWAVSTMToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void IsabelleSoundEditorWAVSTMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             IsabelleSoundEditor z = new IsabelleSoundEditor();
@@ -8115,7 +8273,8 @@ namespace Citric_Composer {
 
         }
 
-        private void BrewstersWARBrewerToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void BrewstersWARBrewerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             EditorBase z = new Brewster_WAR_Brewer(MainWindow);
@@ -8123,7 +8282,8 @@ namespace Citric_Composer {
 
         }
 
-        private void WolfgangsDataWriterWSDToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void WolfgangsDataWriterWSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             EditorBase z = new Wolfgang_WSD_Writer(MainWindow);
@@ -8131,7 +8291,8 @@ namespace Citric_Composer {
 
         }
 
-        private void BBBsBankerBNKToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void BBBsBankerBNKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             EditorBase z = new Brewster_WAR_Brewer(MainWindow);
@@ -8139,7 +8300,8 @@ namespace Citric_Composer {
 
         }
 
-        private void SSSsSequencerSEQToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SSSsSequencerSEQToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             EditorBase z = new Static_Sequencer(MainWindow);
@@ -8147,7 +8309,8 @@ namespace Citric_Composer {
 
         }
 
-        private void GoldisGrouperGRPToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void GoldisGrouperGRPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
             //Start editor.
             EditorBase z = new Goldi_GRP_Grouper(MainWindow);
@@ -8160,62 +8323,82 @@ namespace Citric_Composer {
         //SAR Project info.
         #region SARProjectInfo
 
-        private void MaxSeqNumBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxSeqNumBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxSeqTrackNumBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxSeqTrackNumBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxStreamNumBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxStreamNumBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxStreamNumTracksBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxStreamNumTracksBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxStreamNumChannelsBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxStreamNumChannelsBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxWaveNumBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxWaveNumBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void MaxWaveNumTracksBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void MaxWaveNumTracksBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void StreamBufferTimesBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void StreamBufferTimesBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void OptionsPIBox_ValueChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void OptionsPIBox_ValueChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
 
-        private void SarIncludeStringBlock_CheckedChanged(object sender, EventArgs e) {
-            if (!WritingInfo) {
+        private void SarIncludeStringBlock_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!WritingInfo)
+            {
                 SarProjectInfoUpdated();
             }
         }
@@ -8224,332 +8407,350 @@ namespace Citric_Composer {
 
         #endregion
 
-        public virtual void StmSound3dButton_Click(object sender, EventArgs e) {}
+        public virtual void StmSound3dButton_Click(object sender, EventArgs e) { }
 
-        public virtual void WsdSound3dButton_Click(object sender, EventArgs e) {}
+        public virtual void WsdSound3dButton_Click(object sender, EventArgs e) { }
 
-        public virtual void SeqEditSound3dInfoButton_Click(object sender, EventArgs e) {}
+        public virtual void SeqEditSound3dInfoButton_Click(object sender, EventArgs e) { }
 
-        public virtual void SeqEditSoundInfoButton_Click(object sender, EventArgs e) {}
+        public virtual void SeqEditSoundInfoButton_Click(object sender, EventArgs e) { }
 
-        public virtual void WsdEditSoundInfoButton_Click(object sender, EventArgs e) {}
+        public virtual void WsdEditSoundInfoButton_Click(object sender, EventArgs e) { }
 
-        public virtual void StmSoundInfoButton_Click(object sender, EventArgs e) {}
+        public virtual void StmSoundInfoButton_Click(object sender, EventArgs e) { }
 
-        public virtual void FileTypeBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void FileTypeBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void PlayerSoundLimitBox_ValueChanged(object sender, EventArgs e) {}
+        public virtual void PlayerSoundLimitBox_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void PlayerEnableSoundLimitBox_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void PlayerEnableSoundLimitBox_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void PlayerHeapSizeBox_ValueChanged(object sender, EventArgs e) {}
+        public virtual void PlayerHeapSizeBox_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SarGrpFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SarGrpFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SarWarFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SarWarFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void WarLoadIndividuallyBox_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void WarLoadIndividuallyBox_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void WarIncludeWaveCountBox_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void WarIncludeWaveCountBox_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SarBnkFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SarBnkFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void BnkWarsChanged(object sender, EventArgs e) {}
+        public virtual void BnkWarsChanged(object sender, EventArgs e) { }
 
-        public virtual void SoundGrpStartIndex_ValueChanged(object sender, EventArgs e) {}
+        public virtual void SoundGrpStartIndex_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SoundGrpEndIndex_ValueChanged(object sender, EventArgs e) {}
+        public virtual void SoundGrpEndIndex_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SoundGroupFilesChanged(object sender, EventArgs e) {}
+        public virtual void SoundGroupFilesChanged(object sender, EventArgs e) { }
 
-        public virtual void SoundGroupWarsChanged(object sender, EventArgs e) {}
+        public virtual void SoundGroupWarsChanged(object sender, EventArgs e) { }
 
-        public virtual void SarSeqFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SarSeqFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SarSeqPlay_Click(object sender, EventArgs e) {}
+        public virtual void SarSeqPlay_Click(object sender, EventArgs e) { }
 
-        public virtual void SarSeqPause_Click(object sender, EventArgs e) {}
+        public virtual void SarSeqPause_Click(object sender, EventArgs e) { }
 
-        public virtual void SarSeqStop_Click(object sender, EventArgs e) {}
+        public virtual void SarSeqStop_Click(object sender, EventArgs e) { }
 
-        public virtual void SeqSound3dInfoExists_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqSound3dInfoExists_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqBank0Box_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SeqBank0Box_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqBank1Box_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SeqBank1Box_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqBank2Box_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SeqBank2Box_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqBank3Box_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SeqBank3Box_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqOffsetFromLabelButton_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqOffsetFromLabelButton_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqOffsetManualButton_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqOffsetManualButton_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqOffsetFromLabelBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SeqOffsetFromLabelBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqOffsetManualBox_ValueChanged(object sender, EventArgs e) {}
+        public virtual void SeqOffsetManualBox_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqChannelPriorityBox_ValueChanged(object sender, EventArgs e) {}
+        public virtual void SeqChannelPriorityBox_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqIsReleasePriorityBox_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqIsReleasePriorityBox_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC0_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC0_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC1_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC1_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC2_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC2_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC3_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC3_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC4_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC4_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC5_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC5_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC6_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC6_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC7_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC7_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC8_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC8_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC9_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC9_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC10_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC10_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC11_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC11_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC12_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC12_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC13_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC13_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC14_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC14_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqC15_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void SeqC15_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void SarWsdFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void SarWsdFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void SarWsdPlay_Click(object sender, EventArgs e) {}
+        public virtual void SarWsdPlay_Click(object sender, EventArgs e) { }
 
-        public virtual void SarWsdPause_Click(object sender, EventArgs e) {}
+        public virtual void SarWsdPause_Click(object sender, EventArgs e) { }
 
-        public virtual void SarWsdStop_Click(object sender, EventArgs e) {}
+        public virtual void SarWsdStop_Click(object sender, EventArgs e) { }
 
-        public virtual void WsdSound3dEnable_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void WsdSound3dEnable_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void WsdWaveIndex_ValueChanged(object sender, EventArgs e) {}
+        public virtual void WsdWaveIndex_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void WsdTracksToAllocate_ValueChanged(object sender, EventArgs e) {}
+        public virtual void WsdTracksToAllocate_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void WsdCopyCount_Click(object sender, EventArgs e) {}
+        public virtual void WsdCopyCount_Click(object sender, EventArgs e) { }
 
-        public virtual void WsdChannelPriority_ValueChanged(object sender, EventArgs e) {}
+        public virtual void WsdChannelPriority_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void WsdFixPriority_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void WsdFixPriority_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void StmFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void StmPlay_Click(object sender, EventArgs e) {}
+        public virtual void StmPlay_Click(object sender, EventArgs e) { }
 
-        public virtual void StmPause_Click(object sender, EventArgs e) {}
+        public virtual void StmPause_Click(object sender, EventArgs e) { }
 
-        public virtual void StmStop_Click(object sender, EventArgs e) {}
+        public virtual void StmStop_Click(object sender, EventArgs e) { }
 
-        public virtual void StmSound3dEnable_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmSound3dEnable_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmWriteTrackInfo_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmWriteTrackInfo_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmUpdateTrackInfo_Click(object sender, EventArgs e) {}
+        public virtual void StmUpdateTrackInfo_Click(object sender, EventArgs e) { }
 
-        public virtual void StmTrack0_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack0_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack1_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack1_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack2_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack2_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack3_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack3_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack4_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack4_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack5_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack5_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack6_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack6_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack7_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack7_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack8_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack8_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack9_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack9_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack10_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack10_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack11_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack11_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack12_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack12_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack13_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack13_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack14_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack14_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmTrack15_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmTrack15_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmStreamType_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void StmStreamType_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void StmAllocateChannelsNum_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmAllocateChannelsNum_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmCopyChannelCountFromFile_Click(object sender, EventArgs e) {}
+        public virtual void StmCopyChannelCountFromFile_Click(object sender, EventArgs e) { }
 
-        public virtual void StmPitch_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmPitch_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmIncludeExtension_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmIncludeExtension_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmLoopStartFrame_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmLoopStartFrame_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmLoopEndFrame_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmLoopEndFrame_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmCopyExtensionFromFile_Click(object sender, EventArgs e) {}
+        public virtual void StmCopyExtensionFromFile_Click(object sender, EventArgs e) { }
 
-        public virtual void StmGeneratePrefetch_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void StmGeneratePrefetch_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void StmPrefetchFileIdBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void StmPrefetchFileIdBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void StmUpdatePrefetchInfo_Click(object sender, EventArgs e) {}
+        public virtual void StmUpdatePrefetchInfo_Click(object sender, EventArgs e) { }
 
-        public virtual void StmCreateUniquePrefetchFile_Click(object sender, EventArgs e) {}
+        public virtual void StmCreateUniquePrefetchFile_Click(object sender, EventArgs e) { }
 
-        public virtual void StmSendMain_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmSendMain_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmSendA_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmSendA_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmSendB_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmSendB_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void StmSendC_ValueChanged(object sender, EventArgs e) {}
+        public virtual void StmSendC_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackVolume_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackVolume_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackPan_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackPan_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSpan_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackSpan_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSurround_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void TrackSurround_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackLPFFrequency_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackLPFFrequency_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackBiquadType_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void TrackBiquadType_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackBiquadValue_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackBiquadValue_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSendMain_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackSendMain_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSendA_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackSendA_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSendB_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackSendB_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackSendC_ValueChanged(object sender, EventArgs e) {}
+        public virtual void TrackSendC_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void TrackChannelsChanged(object sender, EventArgs e) {}
+        public virtual void TrackChannelsChanged(object sender, EventArgs e) { }
 
-        public virtual void ByteOrderBox_SelectedIndexChanged(object sender, EventArgs e) {}
+        public virtual void ByteOrderBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        public virtual void VersionMax_ValueChanged(object sender, EventArgs e) {}
+        public virtual void VersionMax_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void VersionMin_ValueChanged(object sender, EventArgs e) {}
+        public virtual void VersionMin_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void VersionRev_ValueChanged(object sender, EventArgs e) {}
+        public virtual void VersionRev_ValueChanged(object sender, EventArgs e) { }
 
-        public virtual void SeqVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void SeqVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void BankVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void BankVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void WarVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void WarVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void WsdVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void WsdVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void GrpVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void GrpVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void StmVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void StmVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void StpVersionUpdate_Click(object sender, EventArgs e) {}
+        public virtual void StpVersionUpdate_Click(object sender, EventArgs e) { }
 
-        public virtual void FilesIncludeGroups_CheckedChanged(object sender, EventArgs e) {}
+        public virtual void FilesIncludeGroups_CheckedChanged(object sender, EventArgs e) { }
 
-        public virtual void FilesGroupGridCellChanged(object sender, EventArgs e) {}
+        public virtual void FilesGroupGridCellChanged(object sender, EventArgs e) { }
 
-        public virtual void ReplaceToolStripMenuItem_Click(object sender, EventArgs e) {}
+        public virtual void ReplaceToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        public virtual void ExportToolStripMenuItem_Click(object sender, EventArgs e) {}
+        public virtual void ExportToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        public virtual void ChangeExternalPathToolStripMenuItem_Click(object sender, EventArgs e) {}
+        public virtual void ChangeExternalPathToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        public virtual void SarAddAbove_Click(object sender, EventArgs e) {}
+        public virtual void SarAddAbove_Click(object sender, EventArgs e) { }
 
-        public virtual void SarAddBelow_Click(object sender, EventArgs e) {}
+        public virtual void SarAddBelow_Click(object sender, EventArgs e) { }
 
-        public virtual void SarAddInside_Click(object sender, EventArgs e) {}
+        public virtual void SarAddInside_Click(object sender, EventArgs e) { }
 
-        public virtual void SarMoveUp_Click(object sender, EventArgs e) {}
+        public virtual void SarMoveUp_Click(object sender, EventArgs e) { }
 
-        public virtual void SarMoveDown_Click(object sender, EventArgs e) {}
+        public virtual void SarMoveDown_Click(object sender, EventArgs e) { }
 
-        public virtual void SarReplace_Click(object sender, EventArgs e) {}
+        public virtual void SarReplace_Click(object sender, EventArgs e) { }
 
-        public virtual void SarExport_Click(object sender, EventArgs e) {}
+        public virtual void SarExport_Click(object sender, EventArgs e) { }
 
-        public virtual void SarRename_Click(object sender, EventArgs e) {}
+        public virtual void SarRename_Click(object sender, EventArgs e) { }
 
-        public virtual void SarNullify_Click(object sender, EventArgs e) {}
+        public virtual void SarNullify_Click(object sender, EventArgs e) { }
 
-        public virtual void SarDelete_Click(object sender, EventArgs e) {}
+        public virtual void SarDelete_Click(object sender, EventArgs e) { }
 
-        private void SarSeqPlayOnce_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayOnce.Checked) {
+        private void SarSeqPlayOnce_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayOnce.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Once;
             }
         }
 
-        private void SarSeqPlayLoop_CheckedChanged(object sender, EventArgs e) {
-            if((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayLoop.Checked) {
+        private void SarSeqPlayLoop_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayLoop.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Loop;
             }
         }
 
-        private void SarSeqPlayNext_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayNext.Checked) {
+        private void SarSeqPlayNext_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("SEQ") || EntryPlayer.CurrHash == "") && sarSeqPlayNext.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Next;
             }
         }
 
-        private void SarWsdPlayOnce_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayOnce.Checked) {
+        private void SarWsdPlayOnce_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayOnce.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Once;
             }
         }
 
-        private void SarWsdPlayLoop_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayLoop.Checked) {
+        private void SarWsdPlayLoop_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayLoop.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Loop;
             }
         }
 
-        private void SarWsdPlayNext_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayNext.Checked) {
+        private void SarWsdPlayNext_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("WSD") || EntryPlayer.CurrHash == "") && sarWsdPlayNext.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Next;
             }
         }
 
-        private void StmPlayOnce_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayOnce.Checked) {
+        private void StmPlayOnce_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayOnce.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Once;
             }
         }
 
-        private void StmPlayLoop_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayLoop.Checked) {
+        private void StmPlayLoop_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayLoop.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Loop;
             }
         }
 
-        private void StmPlayNext_CheckedChanged(object sender, EventArgs e) {
-            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayNext.Checked) {
+        private void StmPlayNext_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((EntryPlayer.CurrHash.StartsWith("STM") || EntryPlayer.CurrHash == "") && stmPlayNext.Checked)
+            {
                 EntryPlayer.PlayMode = EntryPlayer.EPlayMode.Next;
             }
         }
